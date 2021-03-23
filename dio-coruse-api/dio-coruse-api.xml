@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dio-coruse-api</name>
+    </assembly>
+    <members>
+        <member name="M:dio_coruse_api.Controllers.UserController.Login(dio_coruse_api.Controllers.Models.Users.LoginViewModelInput)">
+            <summary>
+            This service allows to authenticate a user registered and active
+            </summary>
+            <param name="loginViewModelInput">Login view model</param>
+            <returns>Return Ok status, user data and token</returns>
+        </member>
+    </members>
+</doc>

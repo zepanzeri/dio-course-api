@@ -5,8 +5,29 @@
         <RootNamespace>dio_coruse_api</RootNamespace>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>dio-coruse-api.xml</DocumentationFile>
+    </PropertyGroup>
+
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.1.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Controllers\Models\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Controllers\Models\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Controllers\Models\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Controllers\Models\**" />
     </ItemGroup>
 
 </Project>

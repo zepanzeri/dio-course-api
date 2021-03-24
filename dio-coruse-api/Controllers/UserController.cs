@@ -1,4 +1,5 @@
 ﻿using dio_coruse_api.Controllers.Models.Users;
+using dio_coruse_api.Filters;
 using dio_coruse_api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
@@ -30,6 +31,7 @@ namespace dio_coruse_api.Controllers
         
         [HttpPost]
         [Route("login")]
+        [CustomModelStateValidation]
         public IActionResult Login(LoginViewModelInput loginViewModelInput)
         {
             return Ok(loginViewModelInput);
